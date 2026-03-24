@@ -235,19 +235,27 @@
     });
   }
 
-  /* Contact page: 이메일 1줄 + Formspree JSON */
+  /* Contact page: 이메일 → Supabase contact_emails 테이블 */
+  /* Supabase Dashboard → Settings → API: Project URL, Publishable(또는 anon) 키 복사 */
+  var STK_SUPABASE_URL = 'https://wjwxewehtloffnfbcovy.supabase.co';
+  var STK_SUPABASE_ANON_KEY = 'sb_publishable_pIBQzGFE1BG5sOIIAPJD4w_C54dzn5S';
+
   var contactForm = document.getElementById('contactForm');
   var emailInput = document.getElementById('emailInput');
   if(contactForm && emailInput){
     var btn = contactForm.querySelector('.email-submit');
     var successState = document.getElementById('successState');
     var sentEmail = document.getElementById('sentEmail');
-    var formspreeUrl = 'https://formspree.io/f/xpzgjqyz';
 
     contactForm.addEventListener('submit', function(e){
       e.preventDefault();
       var email = emailInput.value.trim();
       if(!email) return;
+
+      if(!STK_SUPABASE_ANON_KEY){
+        window.alert('js/main.js 에서 STK_SUPABASE_ANON_KEY 에 Publishable 키를 넣어 주세요. (Supabase → Settings → API)');
+        return;
+      }
 
       var btnHtml = btn ? btn.innerHTML : '';
       if(btn){
@@ -255,17 +263,17 @@
         btn.textContent = '';
       }
 
-      fetch(formspreeUrl, {
+      var restUrl = STK_SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/contact_emails';
+      fetch(restUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json'
+          Accept: 'application/json',
+          apikey: STK_SUPABASE_ANON_KEY,
+          Authorization: 'Bearer ' + STK_SUPABASE_ANON_KEY,
+          Prefer: 'return=minimal'
         },
-        body: JSON.stringify({
-          email: email,
-          message: '견적 시스템 링크 요청',
-          _subject: '[스튜디오캉] 견적 요청 - ' + email
-        })
+        body: JSON.stringify({ email: email })
       }).then(function(res){
         if(btn){
           btn.classList.remove('loading');
@@ -276,11 +284,15 @@
           if(sentEmail) sentEmail.textContent = email;
           if(successState) successState.style.display = 'block';
         } else {
-          res.json().then(function(data){
-            if(data && data.error) window.alert(data.error);
-            else window.alert('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
+          res.text().then(function(text){
+            var msg = text;
+            try {
+              var data = JSON.parse(text);
+              msg = (data && (data.message || data.error || data.hint)) ? String(data.message || data.error || data.hint) : text;
+            } catch (ignore) {}
+            window.alert('Supabase 오류 HTTP ' + res.status + '\n\n' + (msg || text).slice(0, 400));
           }).catch(function(){
-            window.alert('전송에 실패했습니다. Formspree 폼 ID를 확인해 주세요.');
+            window.alert('전송에 실패했습니다. (HTTP ' + res.status + ')');
           });
         }
       }).catch(function(){
