@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프로젝트 — STUDIOKANG</title>
+<meta name="description" content="스튜디오캉이 기획·제작·납품한 AI 콘텐츠 프로젝트 전체 목록입니다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-texture"></div>
+<div class="bg-stars" id="bgStars"></div>
+<div class="bg-nebula"></div>
+<div class="bg-noise"><svg width="100%" height="100%"><filter id="nf"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nf)"/></svg></div>
+<div class="custom-cursor" id="customCursor"></div>
+
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><img src="assets/logo-studiokang.png" alt="STUDIOKANG"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="projects.html" class="nav-link-active">Showreel</a></li>
+      <li><a href="/votus.html">VOTUS</a></li>
+      <li><a href="/news">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">무료 견적 받기</a>
+    <button class="nav-mobile" id="navToggle" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main class="projects-main">
+  <header class="projects-hero">
+    <p class="projects-hero__label">PROJECTS</p>
+    <h1 class="projects-hero__title">직접 제작한<br>AI 콘텐츠</h1>
+    <p class="projects-hero__sub">스튜디오캉이 기획·제작·납품한<br>실제 프로젝트 전체 목록입니다.</p>
+    <div class="projects-hero__stats">
+      <div>
+        <div class="projects-hero__stat-val">50건+</div>
+        <div class="projects-hero__stat-lbl">총 프로젝트</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="filter-bar">
+      <div class="filter-tabs" role="tablist" aria-label="프로젝트 유형">
+        <button type="button" class="tab active" data-filter="all" role="tab" aria-selected="true">전체 <span class="tab-count">9</span></button>
+        <button type="button" class="tab" data-filter="ad-film" role="tab" aria-selected="false">광고 영상 <span class="tab-count">6</span></button>
+        <button type="button" class="tab" data-filter="short-form" role="tab" aria-selected="false">숏폼 <span class="tab-count">2</span></button>
+        <button type="button" class="tab" data-filter="public" role="tab" aria-selected="false">공공기관 <span class="tab-count">3</span></button>
+        <button type="button" class="tab" data-filter="fashion" role="tab" aria-selected="false">패션/뷰티 <span class="tab-count">4</span></button>
+      </div>
+      <label class="visually-hidden" for="projectsSort">정렬</label>
+      <select class="sort-select" id="projectsSort" aria-label="프로젝트 정렬">
+        <option value="newest">최신순</option>
+        <option value="oldest">오래된순</option>
+      </select>
+    </div>
+
+    <div class="projects-slider-wrap">
+      <button type="button" class="slider-arrow prev" aria-label="이전 프로젝트">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="15,18 9,12 15,6"/>
+        </svg>
+      </button>
+      <button type="button" class="slider-arrow next" aria-label="다음 프로젝트">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="9,18 15,12 9,6"/>
+        </svg>
+      </button>
+
+      <div class="projects-track" id="projectsGrid">
+
+      <div class="project-card" data-video-src="assets/A (5).mp4" data-filter="short-form fashion" data-date="2025.07" data-sort-key="incrediwear">
+        <div class="project-thumb">
+          <video muted loop playsinline autoplay><source src="assets/A (5).mp4" type="video/mp4"></video>
+          <div class="proj-top">
+            <span class="proj-platform">Instagram</span>
+            <button type="button" class="proj-play" aria-hidden="true" tabindex="-1">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+          <div class="proj-bottom">
+            <span class="proj-badge">SHORT-FORM</span>
+            <div class="proj-client">Incrediwear</div>
+            <div class="proj-metrics">
+              <div><div class="pm-val">3일</div><div class="pm-lbl">제작</div></div>
+              <div class="pm-divider" aria-hidden="true"></div>
+              <div><div class="pm-val">90%</div><div class="pm-lbl">절감</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-video-src="assets/A (3).mp4" data-filter="short-form" data-date="2025.07" data-sort-key="tiktok">
+        <div class="project-thumb">
+          <video muted loop playsinline autoplay><source src="assets/A (3).mp4" type="video/mp4"></video>
+          <div class="proj-top">
+            <span class="proj-platform">TikTok</span>
+            <button type="button" class="proj-play" aria-hidden="true" tabindex="-1">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+          <div class="proj-bottom">
+            <span class="proj-badge">SHORT-FORM</span>
+            <div class="proj-client">TikTok</div>
+            <div class="proj-metrics">
+              <div><div class="pm-val">3일</div><div class="pm-lbl">제작</div></div>
+              <div class="pm-divider" aria-hidden="true"></div>
+              <div><div class="pm-val">85%</div><div class="pm-lbl">절감</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-video-src="assets/A (6).mp4" data-filter="ad-film fashion" data-date="2025.06" data-sort-key="drsante">
+        <div class="project-thumb">
+          <video muted loop playsinline autoplay><source src="assets/A (6).mp4" type="video/mp4"></video>
+          <div class="proj-top">
+            <span class="proj-platform">Instagram</span>
+            <button type="button" class="proj-play" aria-hidden="true" tabindex="-1">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+          <div class="proj-bottom">
+            <span class="proj-badge">AD FILM</span>
+            <div class="proj-client">Dr.SANTE</div>
+            <div class="proj-metrics">
+              <div><div class="pm-val">10일</div><div class="pm-lbl">제작</div></div>
+              <div class="pm-divider" aria-hidden="true"></div>
+              <div><div class="pm-val">70%</div><div class="pm-lbl">절감</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-video-src="assets/A (7).mp4" data-filter="ad-film public" data-date="2025.05" data-sort-key="gyeonggi">
+        <div class="project-thumb">
+          <video muted loop playsinline autoplay><source src="assets/A (7).mp4" type="video/mp4"></video>
+          <div class="proj-top">
+            <span class="proj-platform">YouTube</span>
+            <button type="button" class="proj-play" aria-hidden="true" tabindex="-1">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+          <div class="proj-bottom">
+            <span class="proj-badge">CAMPAIGN</span>
+            <div class="proj-client">경기도</div>
+            <div class="proj-metrics">
+              <div><div class="pm-val">14일</div><div class="pm-lbl">제작</div></div>
+              <div class="pm-divider" aria-hidden="true"></div>
+              <div><div class="pm-val">50%</div><div class="pm-lbl">단축</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-video-src="assets/A (1).mp4" data-filter="ad-film public" data-date="2025.05" data-sort-key="gbsa">
+        <div class="project-thumb">
+          <video muted loop playsinline autoplay><source src="assets/A (1).mp4" type="video/mp4"></video>
+          <div class="proj-top">
+            <span class="proj-platform">YouTube</span>
+            <button type="button" class="proj-play" aria-hidden="true" tabindex="-1">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+          <div class="proj-bottom">
+            <span class="proj-badge">PUBLIC</span>
+            <div class="proj-client">GBSA</div>
+            <div class="proj-metrics">
+              <div><div class="pm-val">14일</div><div class="pm-lbl">제작</div></div>
+              <div class="pm-divider" aria-hidden="true"></div>
+              <div><div class="pm-val">55%</div><div class="pm-lbl">단축</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-video-src="assets/A (9).mp4" data-filter="ad-film fashion" data-date="2025.04" data-sort-key="mcm">
+        <div class="project-thumb">
+          <video muted loop playsinline autoplay><source src="assets/A (9).mp4" type="video/mp4"></video>
+          <div class="proj-top">
+            <span class="proj-platform">Instagram</span>
+            <button type="button" class="proj-play" aria-hidden="true" tabindex="-1">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+          <div class="proj-bottom">
+            <span class="proj-badge">AD FILM</span>
+            <div class="proj-client">MCM</div>
+            <div class="proj-metrics">
+              <div><div class="pm-val">5일</div><div class="pm-lbl">제작</div></div>
+              <div class="pm-divider" aria-hidden="true"></div>
+              <div><div class="pm-val">70%</div><div class="pm-lbl">절감</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-video-src="assets/A (4).mp4" data-filter="ad-film" data-date="2025.03" data-sort-key="vw">
+        <div class="project-thumb">
+          <video muted loop playsinline autoplay><source src="assets/A (4).mp4" type="video/mp4"></video>
+          <div class="proj-top">
+            <span class="proj-platform">YouTube</span>
+            <button type="button" class="proj-play" aria-hidden="true" tabindex="-1">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+          <div class="proj-bottom">
+            <span class="proj-badge">AD FILM</span>
+            <div class="proj-client">Volkswagen</div>
+            <div class="proj-metrics">
+              <div><div class="pm-val">7일</div><div class="pm-lbl">제작</div></div>
+              <div class="pm-divider" aria-hidden="true"></div>
+              <div><div class="pm-val">60%</div><div class="pm-lbl">절감</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-video-src="assets/A (8).mp4" data-filter="ad-film fashion" data-date="2024.12" data-sort-key="coreana">
+        <div class="project-thumb">
+          <video muted loop playsinline autoplay><source src="assets/A (8).mp4" type="video/mp4"></video>
+          <div class="proj-top">
+            <span class="proj-platform">TV</span>
+            <button type="button" class="proj-play" aria-hidden="true" tabindex="-1">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+          <div class="proj-bottom">
+            <span class="proj-badge">BEAUTY</span>
+            <div class="proj-client">Coreana</div>
+            <div class="proj-metrics">
+              <div><div class="pm-val">12일</div><div class="pm-lbl">제작</div></div>
+              <div class="pm-divider" aria-hidden="true"></div>
+              <div><div class="pm-val">65%</div><div class="pm-lbl">절감</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-video-src="assets/A (2).mp4" data-filter="ad-film public" data-date="2024.07" data-sort-key="suwon">
+        <div class="project-thumb">
+          <video muted loop playsinline autoplay><source src="assets/A (2).mp4" type="video/mp4"></video>
+          <div class="proj-top">
+            <span class="proj-platform">YouTube</span>
+            <button type="button" class="proj-play" aria-hidden="true" tabindex="-1">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff"><polygon points="8,5 20,12 8,19"/></svg>
+            </button>
+          </div>
+          <div class="proj-bottom">
+            <span class="proj-badge">PUBLIC</span>
+            <div class="proj-client">수원시</div>
+            <div class="proj-metrics">
+              <div><div class="pm-val">10일</div><div class="pm-lbl">제작</div></div>
+              <div class="pm-divider" aria-hidden="true"></div>
+              <div><div class="pm-val">60%</div><div class="pm-lbl">단축</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="slider-dots" id="projectsSliderDots" role="tablist" aria-label="프로젝트 슬라이드"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/logo-studiokang.png" alt="STUDIOKANG"></div>
+        <p class="footer-tagline">AI 콘텐츠 제작 에이전시.<br>No More Impossible, Only Possible.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스</h4>
+        <a href="/ad-film">광고 영상</a>
+        <a href="/short-form">숏폼 / SNS</a>
+        <a href="/virtual-model">버츄얼 모델</a>
+      </div>
+      <div class="footer-col">
+        <h4>회사</h4>
+        <a href="projects.html">Projects</a>
+        <a href="/news">News</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>주소</h4>
+        <p>경기도 수원시 영통구<br>경기대학교 창업보육센터<br>507~8호</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 STUDIOKANG — All rights reserved.</p>
+      <p class="footer-copy">studiokang.ai</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function () {
+  var grid = document.getElementById('projectsGrid');
+  var sortSelect = document.getElementById('projectsSort');
+  var dotsWrap = document.getElementById('projectsSliderDots');
+  var prevBtn = document.querySelector('.projects-slider-wrap .slider-arrow.prev');
+  var nextBtn = document.querySelector('.projects-slider-wrap .slider-arrow.next');
+  if (!grid || !sortSelect) return;
+
+  var GAP = 12;
+  var VISIBLE_COL_DESKTOP = 2;
+  var activeFilter = 'all';
+  var currentPage = 0;
+
+  function parseDate(s) {
+    var p = String(s).split('.');
+    var y = parseInt(p[0], 10) || 0;
+    var m = parseInt(p[1], 10) || 0;
+    return y * 100 + m;
+  }
+
+  function isMobileSlider() {
+    return typeof window.matchMedia === 'function' && window.matchMedia('(max-width: 768px)').matches;
+  }
+
+  function countCardsForFilter(filter) {
+    var n = 0;
+    grid.querySelectorAll('.project-card').forEach(function (card) {
+      var cats = card.getAttribute('data-filter') || '';
+      if (filter === 'all' || cats.indexOf(filter) !== -1) n++;
+    });
+    return n;
+  }
+
+  function getFirstVisibleCard() {
+    var cards = grid.querySelectorAll('.project-card');
+    for (var i = 0; i < cards.length; i++) {
+      if (cards[i].style.display !== 'none') return cards[i];
+    }
+    return grid.querySelector('.project-card');
+  }
+
+  function getScrollAmount() {
+    var card = getFirstVisibleCard();
+    if (!card || card.offsetWidth === 0) return 0;
+    var w = card.offsetWidth;
+    if (isMobileSlider()) {
+      return w + GAP;
+    }
+    return (w + GAP) * VISIBLE_COL_DESKTOP;
+  }
+
+  function getMaxPage() {
+    var n = countCardsForFilter(activeFilter);
+    if (n === 0) return 0;
+    if (isMobileSlider()) {
+      var totalCols = n;
+      var card = getFirstVisibleCard();
+      var cw = card && card.offsetWidth ? card.offsetWidth + GAP : 172;
+      var visibleCols = Math.max(1, Math.floor(grid.clientWidth / cw));
+      return Math.max(0, totalCols - visibleCols);
+    }
+    var totalCols = Math.ceil(n / 2);
+    return Math.max(0, totalCols - VISIBLE_COL_DESKTOP);
+  }
+
+  function updateArrows() {
+    var maxPage = getMaxPage();
+    if (prevBtn) prevBtn.classList.toggle('disabled', currentPage <= 0);
+    if (nextBtn) nextBtn.classList.toggle('disabled', currentPage >= maxPage);
+  }
+
+  function updateDots() {
+    if (!dotsWrap) return;
+    dotsWrap.querySelectorAll('.dot').forEach(function (d, i) {
+      var on = i === currentPage;
+      d.classList.toggle('active', on);
+      d.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+  }
+
+  function rebuildDots() {
+    if (!dotsWrap) return;
+    var maxPage = getMaxPage();
+    dotsWrap.innerHTML = '';
+    for (var i = 0; i <= maxPage; i++) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'dot' + (i === currentPage ? ' active' : '');
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-selected', i === currentPage ? 'true' : 'false');
+      b.setAttribute('aria-label', '슬라이드 ' + (i + 1) + ' / ' + (maxPage + 1));
+      (function (idx) {
+        b.addEventListener('click', function () {
+          var amt = getScrollAmount();
+          if (!amt) return;
+          currentPage = idx;
+          grid.scrollTo({ left: idx * amt, behavior: 'smooth' });
+          updateArrows();
+          updateDots();
+        });
+      })(i);
+      dotsWrap.appendChild(b);
+    }
+  }
+
+  function resetSlider() {
+    currentPage = 0;
+    grid.scrollTo({ left: 0, behavior: 'auto' });
+    rebuildDots();
+    updateArrows();
+  }
+
+  function sortCards(order) {
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.project-card'));
+    cards.sort(function (a, b) {
+      var da = parseDate(a.getAttribute('data-date'));
+      var db = parseDate(b.getAttribute('data-date'));
+      var cmp = order === 'newest' ? db - da : da - db;
+      if (cmp !== 0) return cmp;
+      return String(a.getAttribute('data-sort-key') || '').localeCompare(String(b.getAttribute('data-sort-key') || ''));
+    });
+    cards.forEach(function (c) {
+      grid.appendChild(c);
+    });
+  }
+
+  function applyFilter(filter) {
+    var cards = grid.querySelectorAll('.project-card');
+    cards.forEach(function (card, i) {
+      var cats = card.getAttribute('data-filter') || '';
+      var show = filter === 'all' || cats.indexOf(filter) !== -1;
+      card.style.transition = 'opacity 0.3s ' + i * 0.03 + 's, transform 0.3s ' + i * 0.03 + 's';
+      if (show) {
+        card.style.display = '';
+        requestAnimationFrame(function () {
+          card.style.opacity = '1';
+          card.style.transform = 'none';
+        });
+      } else {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(10px)';
+        setTimeout(function () {
+          card.style.display = 'none';
+        }, 300);
+      }
+    });
+  }
+
+  document.querySelectorAll('.filter-tabs .tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.filter-tabs .tab').forEach(function (t) {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      activeFilter = tab.getAttribute('data-filter') || 'all';
+      applyFilter(activeFilter);
+      resetSlider();
+    });
+  });
+
+  sortSelect.addEventListener('change', function () {
+    sortCards(sortSelect.value);
+    var active = document.querySelector('.filter-tabs .tab.active');
+    var f = active ? active.getAttribute('data-filter') || 'all' : 'all';
+    activeFilter = f;
+    applyFilter(f);
+    resetSlider();
+  });
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function () {
+      var maxPage = getMaxPage();
+      if (currentPage >= maxPage) return;
+      currentPage++;
+      var amt = getScrollAmount();
+      grid.scrollTo({ left: currentPage * amt, behavior: 'smooth' });
+      updateArrows();
+      updateDots();
+    });
+  }
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function () {
+      if (currentPage <= 0) return;
+      currentPage--;
+      var amt = getScrollAmount();
+      grid.scrollTo({ left: currentPage * amt, behavior: 'smooth' });
+      updateArrows();
+      updateDots();
+    });
+  }
+
+  var isDown = false;
+  var startX = 0;
+  var scrollLeftStart = 0;
+  grid.addEventListener('mousedown', function (e) {
+    if (e.button !== 0) return;
+    isDown = true;
+    startX = e.pageX;
+    scrollLeftStart = grid.scrollLeft;
+  });
+  document.addEventListener('mouseleave', function () {
+    isDown = false;
+  });
+  grid.addEventListener('mouseup', function () {
+    if (!isDown) return;
+    isDown = false;
+    requestAnimationFrame(function () {
+      var amt = getScrollAmount();
+      if (!amt) return;
+      currentPage = Math.min(getMaxPage(), Math.max(0, Math.round(grid.scrollLeft / amt)));
+      updateDots();
+      updateArrows();
+    });
+  });
+  grid.addEventListener('mousemove', function (e) {
+    if (!isDown) return;
+    e.preventDefault();
+    var dx = e.pageX - startX;
+    grid.scrollLeft = scrollLeftStart - dx * 1.5;
+  });
+
+  window.addEventListener('resize', function () {
+    var maxP = getMaxPage();
+    if (currentPage > maxP) {
+      currentPage = maxP;
+      var amt = getScrollAmount();
+      grid.scrollTo({ left: currentPage * amt, behavior: 'auto' });
+    }
+    rebuildDots();
+    updateArrows();
+  });
+
+  rebuildDots();
+  updateArrows();
+})();
+</script>
+</body>
+</html>

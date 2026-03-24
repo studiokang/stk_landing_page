@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOTUS — AI 패션·뷰티 매거진 | STUDIOKANG</title>
+<meta name="description" content="세계 최초 AI 패션·뷰티 매거진 VOTUS. AI 버츄얼 모델과 Virtual Try-On으로 제작되는 스튜디오캉 자체 미디어 IP입니다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-texture"></div>
+<div class="bg-stars" id="bgStars"></div>
+<div class="bg-nebula"></div>
+<div class="bg-noise"><svg width="100%" height="100%"><filter id="nf"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nf)"/></svg></div>
+<div class="custom-cursor" id="customCursor"></div>
+
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><img src="assets/logo-studiokang.png" alt="STUDIOKANG"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="projects.html">Showreel</a></li>
+      <li><a href="/votus.html" class="nav-link-active">VOTUS</a></li>
+      <li><a href="/news">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">무료 견적 받기</a>
+    <button class="nav-mobile" id="navToggle" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main>
+  <!-- [01 HERO] -->
+  <section class="votus-page-hero" aria-labelledby="votus-hero-heading">
+    <div class="votus-watermark" aria-hidden="true">VOTUS</div>
+    <div class="votus-hero-inner">
+      <div class="votus-hero-left reveal">
+        <p class="votus-sec-label">AI MAGAZINE</p>
+        <h1 id="votus-hero-heading" class="votus-hero-title">세계 최초<br>AI 패션·뷰티 매거진</h1>
+        <p class="votus-hero-sub">AI 버츄얼 모델과 Virtual Try-On으로<br>제작된 최초의 AI 패션 매거진.<br>매월 새로운 컨셉으로 발행됩니다.</p>
+      </div>
+      <div class="votus-hero-stats reveal reveal-d1">
+        <div class="votus-stat-item">
+          <div class="num-val">Vol.4</div>
+          <div class="num-label">발행 호수</div>
+        </div>
+        <div class="votus-stat-item">
+          <div class="num-val">100%</div>
+          <div class="num-label">AI 제작</div>
+        </div>
+        <div class="votus-stat-item">
+          <div class="num-val">매월</div>
+          <div class="num-label">정기 발행</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [02 ARCHIVE] -->
+  <section class="votus-archive" id="archive" aria-labelledby="votus-archive-heading">
+    <div class="container">
+      <p class="section-label reveal">ARCHIVE</p>
+      <h2 id="votus-archive-heading" class="section-heading reveal reveal-d1">발행된 매거진</h2>
+
+      <div class="votus-grid">
+        <a class="mag-card reveal" href="https://online.fliphtml5.com/votusai/svfr/#p=1" target="_blank" rel="noopener noreferrer">
+          <div class="mag-cover">
+            <img src="assets/votus-vol1-cover.png" alt="VOTUS Vol.1 Eternal Preppy 표지" />
+            <span class="mag-open">열기</span>
+          </div>
+          <div class="mag-info">
+            <div class="mag-vol">VOL.1</div>
+            <div class="mag-title">VOTUS September 2024</div>
+            <div class="mag-theme">Eternal Preppy</div>
+            <div class="mag-date">SEPTEMBER 2024</div>
+          </div>
+        </a>
+
+        <a class="mag-card reveal reveal-d1" href="https://online.fliphtml5.com/votusai/grja/" target="_blank" rel="noopener noreferrer">
+          <div class="mag-cover">
+            <img src="assets/votus-vol2-cover.png" alt="VOTUS Vol.2 The AI Matrix 표지" />
+            <span class="mag-open">열기</span>
+          </div>
+          <div class="mag-info">
+            <div class="mag-vol">VOL.2</div>
+            <div class="mag-title">VOTUS October 2024</div>
+            <div class="mag-theme">The AI Matrix</div>
+            <div class="mag-date">OCTOBER 2024</div>
+          </div>
+        </a>
+
+        <a class="mag-card reveal reveal-d2" href="https://votus.ai/mag/votus0" target="_blank" rel="noopener noreferrer">
+          <div class="mag-cover">
+            <img src="assets/votus-vol0-cover.png" alt="VOTUS Vol.0 Greenary 창간준비호 표지" />
+            <span class="mag-open">열기</span>
+          </div>
+          <div class="mag-info">
+            <div class="mag-vol">VOL.0</div>
+            <div class="mag-title">VOTUS August 2024</div>
+            <div class="mag-theme">Greenary</div>
+            <div class="mag-date">AUGUST 2024</div>
+          </div>
+        </a>
+
+        <a class="mag-card reveal reveal-d3" href="https://online.fliphtml5.com/votusai/urcg/" target="_blank" rel="noopener noreferrer">
+          <div class="mag-cover">
+            <img src="assets/votus-vol3-cover.png" alt="VOTUS Vol.3 Bohemian Winter 표지" />
+            <span class="mag-open">열기</span>
+          </div>
+          <div class="mag-info">
+            <div class="mag-vol">VOL.3</div>
+            <div class="mag-title">VOTUS November 2024</div>
+            <div class="mag-theme">Bohemian Winter</div>
+            <div class="mag-date">NOVEMBER 2024</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- [03 ABOUT VOTUS] -->
+  <section class="votus-about" id="about-votus" aria-labelledby="votus-about-heading">
+    <div class="container">
+      <p class="section-label reveal">ABOUT VOTUS</p>
+      <h2 id="votus-about-heading" class="section-heading reveal reveal-d1">AI가 만드는 패션의 미래</h2>
+
+      <div class="votus-about-grid">
+        <p class="votus-about-text reveal reveal-d2">VOTUS는 스튜디오캉이 직접
+기획·제작하는 세계 최초의
+AI 패션·뷰티 매거진입니다.
+
+AI 버츄얼 모델과 Virtual Try-On
+기술을 활용해 매월 새로운 컨셉의
+에디토리얼을 선보입니다.
+
+실제 촬영 없이 100% AI로
+완성되는 패션 미디어의 새로운 기준.</p>
+        <ul class="votus-about-list reveal reveal-d3">
+          <li>◈ 세계 최초 AI 패션 매거진</li>
+          <li>◈ AI 버츄얼 모델 출연</li>
+          <li>◈ Virtual Try-On 기술 적용</li>
+          <li>◈ 매월 정기 발행</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- [04 CTA] -->
+  <section class="votus-brand-cta" aria-labelledby="votus-cta-heading">
+    <div class="cta-nebula"></div>
+    <div class="container">
+      <h2 id="votus-cta-heading" class="votus-cta-heading reveal">VOTUS에 브랜드를<br>실어보세요.</h2>
+      <p class="votus-cta-sub reveal reveal-d1">AI 매거진 광고, 버츄얼 모델 협찬,<br>에디토리얼 협업 등 다양한 방식으로<br>브랜드를 노출할 수 있습니다.</p>
+      <div class="votus-cta-btns reveal reveal-d2">
+        <a href="contact.html?source=votus" class="btn-primary">협업 문의하기</a>
+        <a href="https://online.fliphtml5.com/votusai/urcg/" class="btn-ghost" target="_blank" rel="noopener noreferrer">최신호 보기 ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/logo-studiokang.png" alt="STUDIOKANG"></div>
+        <p class="footer-tagline">AI 콘텐츠 제작 에이전시.<br>No More Impossible, Only Possible.</p>
+      </div>
+      <div class="footer-col">
+        <h4>서비스</h4>
+        <a href="/ad-film">광고 영상</a>
+        <a href="/short-form">숏폼 / SNS</a>
+        <a href="/virtual-model">버츄얼 모델</a>
+      </div>
+      <div class="footer-col">
+        <h4>회사</h4>
+        <a href="projects.html">Projects</a>
+        <a href="/news">News</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>주소</h4>
+        <p>경기도 수원시 영통구<br>경기대학교 창업보육센터<br>507~8호</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 STUDIOKANG — All rights reserved.</p>
+      <p class="footer-copy">studiokang.ai</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
