@@ -27,21 +27,6 @@
   var tog=document.getElementById('navToggle'),links=document.getElementById('navLinks');
   if(tog){tog.addEventListener('click',function(){links.classList.toggle('open');});links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');});});}
 
-  /* Nav: News active on /news, news.html, news/index.html */
-  (function(){
-    var navLinks=document.getElementById('navLinks');
-    if(!navLinks)return;
-    var path=(window.location.pathname||'').replace(/\\/g,'/');
-    var onNews=/news\.html$/i.test(path)||/\/news\/?$/i.test(path)||/\/news\/index\.html$/i.test(path);
-    if(!onNews)return;
-    navLinks.querySelectorAll('a').forEach(function(a){a.classList.remove('nav-link-active');});
-    var newsLink=null;
-    navLinks.querySelectorAll('a').forEach(function(a){
-      if((a.textContent||'').replace(/\s+/g,' ').trim().toLowerCase()==='news')newsLink=a;
-    });
-    if(newsLink)newsLink.classList.add('nav-link-active');
-  })();
-
   /* SERVICES → #what-we-do: smooth scroll on landing */
   document.querySelectorAll('a[href="/#what-we-do"]').forEach(function(servicesA){
     servicesA.addEventListener('click',function(e){
